@@ -1,0 +1,89 @@
+{
+    "roundName": "qualifiers",
+    "beatmaps": [
+        {
+            "songName": "The Order...",
+            "difficultyName": "PUNISHMENT...",
+            "mapper": "pnky",
+            "modId": "NM1"
+        },
+        {
+            "songName": "Troposphere",
+            "difficultyName": "Into the Stratosphere",
+            "mapper": "Astronic",
+            "modId": "NM2"
+        },
+        {
+            "songName": "Resist",
+            "difficultyName": "Expert",
+            "mapper": "Kine",
+            "modId": "NM3"
+        },
+        {
+            "songName": "Neuron",
+            "difficultyName": "Feiri x Nanachi's Collab Expert",
+            "mapper": "Feiri",
+            "modId": "NM4"
+        },
+        {
+            "songName": "LUVORATORRRRRY! ver Reol feat. nqrse",
+            "difficultyName": "Beasty Gimmick",
+            "mapper": "Ryuusei Aika",
+            "modId": "NM5"
+        },
+        {
+            "songName": "Guerilla Radio",
+            "difficultyName": "Lights Out",
+            "mapper": "VINXIS",
+            "modId": "HD1"
+        },
+        {
+            "songName": "Darling Dance",
+            "difficultyName": "Sea Food Extra",
+            "mapper": "Kuro Fuyusaki",
+            "modId": "HD2"
+        },
+        {
+            "songName": "Mafain",
+            "difficultyName": "expert",
+            "mapper": "procq",
+            "modId": "HD3"
+        },
+        {
+            "songName": "STORIA",
+            "difficultyName": "My Story",
+            "mapper": "- AzRaeL -",
+            "modId": "HR1"
+        },
+        {
+            "songName": "Deer Dance",
+            "difficultyName": "Atrocity",
+            "mapper": "AdeAAa",
+            "modId": "HR2"
+        },
+        {
+            "songName": "HERE COMES HOPE",
+            "difficultyName": "Refrain",
+            "mapper": "newton-",
+            "modId": "HR3"
+        },
+        {
+            "songName": "As It Was",
+            "difficultyName": "In this world, it's just us <3",
+            "mapper": "Kyouren",
+            "modId": "DT1"
+        },
+        {
+            "songName": "Ura-Omote Lovers feat. Hatsune Miku",
+            "difficultyName": "Doinkus",
+            "mapper": "jellium",
+            "modId": "DT2"
+        },
+        {
+            "songName": "Sempronius",
+            "difficultyName": "COHORTES::#I[PRAETORIAE]",
+            "mapper": "Stick2Glue",
+            "modId": "DT3"
+        }
+    ]
+}
