@@ -1,0 +1,490 @@
+@font-face {
+    font-family: "Never Brat";
+    src: url("../fonts/Never\ Brat.otf")
+}
+
+:root {
+    --main-text: #10664A;
+    --secondary-text: #F7F6DA;
+    --nowPlayingWrapperWidth: 527.38px;
+}
+
+/* Background Video */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 1080px;
+}
+
+/* Whole Page */
+.main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    font-family: "Poppins";
+    font-weight: 900;
+}
+
+/* Replayer Text */
+.replayer-text {
+    position: absolute;
+    top: 175px;
+    right: 30px;
+    font-size: 35px;
+    letter-spacing: -0.5px;
+    color: var(--main-text);
+    font-style: italic;
+    text-align: center;
+}
+
+/* Replayer Name */
+.replayer-name {
+    position: absolute;
+    top: 195px;
+    right: 27px;
+    font-size: 60px;
+    letter-spacing: -0.5px;
+    color: var(--main-text);
+    font-style: italic;
+    text-align: center;
+}
+
+/* Beatmap Image */
+.beatmap-section {
+    position: absolute;
+    top: 295px;
+    right: 21px;
+    width: 586px;
+    height: 594px;
+    border-radius: 20px;
+    background-color: var(--main-text);
+}
+.beatmap-metadata-section {
+    position: relative;
+    width: 586px;
+    height: 238px;
+    border-radius: inherit;
+    background-image: url("https://assets.ppy.sh/beatmaps/1739743/covers/cover.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: rgba(0,0,0,0.5);
+}
+.song-information-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.song-information {
+    display: inline-block;
+    width: max-content;
+    color: var(--secondary-text);
+    font-style: italic;
+    font-size: 32px;
+    letter-spacing: 0.5px;
+}
+.song-title { top: 145px; }
+.song-difficulty { top: 169px; }
+.song-mapper { top: 193px; }
+.textSlide {
+    transform: translate(var(--nowPlayingWrapperWidth));
+    animation: textSlide 12s linear infinite;
+}
+@keyframes textSlide {
+    0% {transform: translate(0px);}
+    11% {transform: translate(0px);}
+    80% { transform: translate(calc(-100% + var(--nowPlayingWrapperWidth))); }
+    100% { transform: translate(calc(-100% + var(--nowPlayingWrapperWidth))); }
+}
+
+/* Beatmap map scroll section */
+.beatmap-map-scroll-title-container {
+    position: absolute;
+    top: 254px;
+    left: -33px;
+    width: 211px;
+    height: 36px;
+    border-radius: 0 10px 10px 0;
+}
+.beatmap-map-scroll-title {
+    position: absolute;
+    top: 261px;
+    left: 9px;
+    font-size: 31px;
+    letter-spacing: -0.5px;
+    line-height: 23px;
+    color: var(--main-text);
+    text-align: center;
+}
+/* Invisible */
+.map-slide-invisible-left { 
+    position: absolute;
+    top: 263px;
+    left: 184px;
+    font-size: 12px;
+    color: rgba(247,246,218,0);
+    opacity: 0;
+}
+.map-slide-invisible-right {
+    position: absolute;
+    top: 263px;
+    left: 651px;
+    font-size: 12px;
+    color: rgba(247,246,218,0);
+    opacity: 0;
+ }
+/* Extreme Left */
+.map-slide-extreme-left {
+    position: absolute;
+    top: 257px;
+    left: 235px;
+    font-size: 20px;
+    color: rgba(247,246,218, 0.33);
+    opacity: 1;
+}
+/* Left / Right */
+.map-slide-left {
+    position: absolute;
+    top: 253px;
+    font-size: 25px;
+    color: rgba(247,246,218, 0.66);
+    opacity: 1;
+    left: 310px; 
+}
+.map-slide-right { 
+    position: absolute;
+    top: 253px;
+    font-size: 25px;
+    color: rgba(247,246,218, 0.66);
+    opacity: 1;
+    left: 500px; 
+}
+/* Current */ 
+.map-slide-current {
+    position: absolute;
+    top: 249px;
+    left: 400px;
+    font-size: 30px;
+    color: var(--secondary-text);
+    opacity: 1;
+}
+
+/* Animation Classes */
+/* From left to right */
+.from-invisible-left-to-extreme-left { animation-name: fromInvisibleLeftToExtremeLeft; }
+.from-extreme-left-to-left { animation-name: fromExtremeLeftToLeft; }
+.from-left-to-current { animation-name: fromLeftToCurrent; }
+.from-current-to-right { animation-name: fromCurrentToRight; }
+.from-right-to-invisible-right { animation-name: fromRightToInvisibleRight; }
+@keyframes fromInvisibleLeftToExtremeLeft {
+    0% {
+        top: 263px;
+        left: 184px;
+        font-size: 12px;
+        color: rgba(247,246,218,0);
+        opacity: 0;
+    }
+    100% {
+        top: 257px;
+        left: 235px;
+        font-size: 20px;
+        color: rgba(247,246,218, 0.33);
+        opacity: 1;
+    }
+}
+@keyframes fromExtremeLeftToLeft {
+    0% {
+        top: 257px;
+        left: 235px;
+        font-size: 20px;
+        color: rgba(247,246,218, 0.33);
+        opacity: 1;
+    }
+    100% {
+        top: 253px;
+        font-size: 25px;
+        color: rgba(247,246,218, 0.66);
+        opacity: 1;
+        left: 310px;
+    }
+}
+@keyframes fromLeftToCurrent {
+    0% {
+        top: 253px;
+        font-size: 25px;
+        color: rgba(247,246,218, 0.66);
+        opacity: 1;
+        left: 310px; 
+    }
+    100% {
+        top: 249px;
+        left: 400px;
+        font-size: 30px;
+        color: var(--secondary-text);
+        opacity: 1;
+    }
+}
+@keyframes fromCurrentToRight {
+    0% {
+        top: 249px;
+        left: 400px;
+        font-size: 30px;
+        color: var(--secondary-text);
+        opacity: 1;
+    }
+    100% {
+        top: 253px;
+        font-size: 25px;
+        color: rgba(247,246,218, 0.66);
+        opacity: 1;
+        left: 500px; 
+    }
+}
+@keyframes fromRightToInvisibleRight {
+    0% {
+        top: 253px;
+        font-size: 25px;
+        color: rgba(247,246,218, 0.66);
+        opacity: 1;
+        left: 500px; 
+    }
+    100% {
+        top: 263px;
+        left: 651px;
+        font-size: 12px;
+        color: rgba(247,246,218,0);
+        opacity: 0;
+    }
+}
+/* From Right to Left */
+.from-extreme-left-to-invisible-left { animation-name: fromExtremeLeftToInvisibleLeft}
+.from-left-to-extreme-left { animation-name: fromLeftToExtremeLeft }
+.from-current-to-left { animation-name: fromCurrentToLeft }
+.from-right-to-current { animation-name: fromRightToCurrent }
+.from-invisible-right-to-right { animation-name: fromInvisibleRightToRight }
+@keyframes fromExtremeLeftToInvisibleLeft {
+    0% {
+        top: 257px;
+        left: 235px;
+        font-size: 20px;
+        color: rgba(247,246,218, 0.33);
+        opacity: 1;
+    }
+    100% {
+        top: 263px;
+        left: 184px;
+        font-size: 12px;
+        color: rgba(247,246,218,0);
+        opacity: 0;
+    }
+}
+@keyframes fromLeftToExtremeLeft {
+    0% {
+        top: 253px;
+        font-size: 25px;
+        color: rgba(247,246,218, 0.66);
+        opacity: 1;
+        left: 310px; 
+    }
+    100% {
+        top: 257px;
+        left: 235px;
+        font-size: 20px;
+        color: rgba(247,246,218, 0.33);
+        opacity: 1;
+    }
+}
+@keyframes fromCurrentToLeft {
+    0% {
+        top: 249px;
+        left: 400px;
+        font-size: 30px;
+        color: var(--secondary-text);
+        opacity: 1;
+    }
+    100% {
+        top: 253px;
+        font-size: 25px;
+        color: rgba(247,246,218, 0.66);
+        opacity: 1;
+        left: 310px; 
+    }
+}
+@keyframes fromRightToCurrent {
+    0% {
+        top: 253px;
+        font-size: 25px;
+        color: rgba(247,246,218, 0.66);
+        opacity: 1;
+        left: 500px; 
+    }
+    100% {
+        top: 249px;
+        left: 400px;
+        font-size: 30px;
+        color: var(--secondary-text);
+        opacity: 1;
+    }
+}
+@keyframes fromInvisibleRightToRight {
+    0% {
+        top: 263px;
+        left: 651px;
+        font-size: 12px;
+        color: rgba(247,246,218,0);
+        opacity: 0;
+    }
+    100% {
+        top: 253px;
+        font-size: 25px;
+        color: rgba(247,246,218, 0.66);
+        opacity: 1;
+        left: 500px; 
+    }
+}
+
+
+/* Beatmap Stats */
+.beatmap-stats {
+    position: absolute;
+    top: 308px;
+    left: 5%;
+    width: 90%;
+    font-size: 28px;
+    line-height: 23px;
+    color: var(--secondary-text);
+    display: flex;
+}
+.beatmap-stats-titles { width: 300px; }
+.beatmap-stats-titles-first-letter { color: #DFED87; }
+.beatmap-stats-numbers {
+    width: calc(100% - 308px);
+    text-align: right;
+}
+
+/* --- Strain Graph --- */
+#strain-graph {
+    position: absolute; bottom: 0;
+    width: 586px; height: 126px;
+    background-image: url("static/strain-graph-background.png");
+    border-radius: 17px;
+}
+.strain-graph-detail {
+    position: absolute; top: 20px;
+    border-radius: 17px;
+}
+#progress {
+	position: absolute; bottom: 0; left: 0;
+	width: 1172px; height: 126px;
+	padding: 0;
+	overflow: hidden;
+	transition: 100ms linear;
+	-webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 49.95%, transparent 50%);
+	mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 49.95%, transparent 50%);
+}
+
+/* Commentator Text */
+.commnentator-text {
+    position: absolute;
+    bottom: 8px;
+    left: 20px;
+    color: var(--secondary-text);
+    font-size: 30px;
+    font-style: italic;
+}
+.commentator-name {
+    position: absolute;
+    left: 20px;
+    color: var(--main-text);
+    font-size: 40px;
+}
+
+/* Sponsor */
+.sponsor {
+    position: absolute;
+    bottom: -29px;
+    right: 21px;
+    font-size: 68px;
+    letter-spacing: -4px;
+    color: var(--main-text);
+}
+
+/* 5wc is powered by */
+.powered-by-text {
+    position: absolute;
+    bottom: 29px;
+    right: 9px;
+    font-size: 30px;
+    color: var(--secondary-text);
+    font-style: italic;
+    letter-spacing: -1px;
+}
+
+/* Sidebar */
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 1920px;
+    width: 250px;
+    height: 1080px;
+    background-color: var(--secondary-text);
+}
+.sidebar-title {
+    width: 100%;
+    font-family: "Poppins";
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+    color: var(--main-text);
+}
+.sidebar-text {
+    width: 80%;
+    padding: 0 10%;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.sidebar-textarea {
+    margin: 0 25px;
+    width: 80%;
+    height: 100px;
+    border: 2px solid var(--main-text);
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 16px;
+    padding: 0;
+}
+.sidebar-button {
+    margin: 10px 25px 0 25px;
+    width: 200px;
+    border: 2px solid var(--main-text);
+    background-color: transparent;
+    height: 50px;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--main-text);
+    border-radius: 10px;
+}
+.sidebar-button:active {
+    background-color: var(--main-text);
+    color: var(--secondary-text);
+}
