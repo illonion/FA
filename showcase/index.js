@@ -269,7 +269,7 @@ let configProgress = {
 		labels: [],
 		datasets: [{
 			borderColor: 'rgba(245, 245, 245, 0)',
-			backgroundColor: 'rgb(16,102,74)',
+			backgroundColor: '#f2a0dd',
 			data: [],
 			fill: true,
 			stepped: false,
