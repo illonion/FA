@@ -240,7 +240,7 @@ let config = {
 		labels: [],
 		datasets: [{
 			borderColor: 'rgba(245, 245, 245, 0)',
-			backgroundColor: 'rgb(41,207,135)',
+			backgroundColor: 'rgb(242, 160, 221)',
 			data: [],
 			fill: true,
 			stepped: false,
@@ -269,7 +269,7 @@ let configProgress = {
 		labels: [],
 		datasets: [{
 			borderColor: 'rgba(245, 245, 245, 0)',
-			backgroundColor: '#f2a0dd',
+			backgroundColor: 'rgb(255, 0, 255)',
 			data: [],
 			fill: true,
 			stepped: false,

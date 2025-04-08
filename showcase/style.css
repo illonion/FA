@@ -106,7 +106,7 @@
 .song-information {
     display: inline-block;
     width: max-content;
-    color: var(--blue);
+    color: white;
     font-style: italic;
     font-size: 25.6px;
     letter-spacing: 0.5px;
