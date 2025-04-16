@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gameplay</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="../_shared/deps/reconnecting-websocket.min.js"></script>
+    <script src="../_shared/deps/countUp.js"></script>
+</head>
+<body>
+    <video class="background-video" autoplay loop muted>
+        <source src="../_shared/assets/background.webm">
+    </video>
+
+    <div class="main">
+        <!-- Flags -->
+        <img class="team-flag left-flag" id="left-flag" src="https://osuflags.omkserver.nl/AU-150.png">
+        <img class="team-flag right-flag" id="right-flag" src="https://osuflags.omkserver.nl/CA-150.png">
+
+        <!-- Team Name -->
+        <div class="team-name left-team-name" id="left-team-name">AUSTRALIA</div>
+        <div class="team-name right-team-name" id="right-team-name">CANADA</div>
+
+        <!-- Stars -->
+        <div class="team-star-container left-team-star-container" id="left-team-star-container"></div>
+        <div class="team-star-container right-team-star-container" id="right-team-star-container"></div>
+
+        <!-- Logo -->
+        <section class="logo">
+            <div class="logo-2025">2025</div>
+            <div class="logo-wc">WC</div>
+            <img class="logo-5" src="static/5-logo.png">
+        </section>
+
+        <!-- Greenscreen -->
+        <div class="greenscreen"></div>
+
+        <section id="score-section">
+            <!-- Score bar -->
+            <div class="score-bar left-score-bar" id="left-score-bar"></div>
+            <div class="score-bar right-score-bar" id="right-score-bar"></div>
+
+            <!-- Scores -->
+            <div class="play-score left-score" id="left-score">500,000</div>
+            <div class="play-score right-score leading-score" id="right-score">700,000</div>
+
+            <!-- Score Differences -->
+            <div class="play-score-difference left-score-difference" id="left-score-difference">(-100,000>)</div>
+            <div class="play-score-difference right-score-difference" id="right-score-difference">(-100,000)</div>
+        </section>
+
+        <!-- Chat Display -->
+        <div class="chat-display" id="chat-display"></div>
+
+        <!-- Now Playing Section -->
+        <section id="now-playing-section">
+            <!-- Now Playing Section Logo -->
+            <section class="now-playing-section-logo">
+                <div class="now-playing-logo-2025">2025</div>
+                <div class="now-playing-logo-wc">WC</div>
+                <img class="now-playing-logo-5" src="static/5-logo.png">
+            </section>
+            <!-- Now Playing Section Stats -->
+            <section class="now-playing-section-stats" id="now-playing-section-stats">
+                <div class="now-playing-section-stats-left">
+                    <div>Length: <span class="now-playing-stats-number" id="now-playing-stats-length">04:01</span></div>
+                    <div>BPM: <span class="now-playing-stats-number" id="now-playing-stats-bpm">181</span></div>
+                </div>
+                <div class="now-playing-section-stats-right">
+                    <div>CS <span class="now-playing-stats-number" id="now-playing-stats-cs">10</span> / 
+                        AR <span class="now-playing-stats-number" id="now-playing-stats-ar">5</span> / 
+                        OD <span class="now-playing-stats-number" id="now-playing-stats-od">7</span></div>
+                    <div>Star Rating: <span class="now-playing-stats-number" id="now-playing-stats-sr">7.00</span></div>
+                </div>
+            </section>
+            <!-- Now Playing Section -->
+            <section class="now-playing-section-metadata" id="now-playing-stats-background">
+                <div class="now-playing-section-metadata-overlay"></div>
+                <div class="now-playing-section-title" id="now-playing-stats-title">ARTIST - TITLE</div>
+                <div class="now-playing-section-mapper-difficulty now-playing-section-mapper">mapper <span class="now-playing-section-mapper-difficulty-name" id="now-playing-stats-mapper"></span></div>
+                <div class="now-playing-section-mapper-difficulty now-playing-section-difficulty">difficulty <span class="now-playing-section-mapper-difficulty-name" id="now-playing-stats-difficulty"></span></div>
+            </section>
+        </section>
+    </div>
+
+    <script src="../_shared/utils.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+:root {
+    --purple: #3c2477;
+    --light-pink: #f2a0dd;
+    --blue: #4781D9;
+    --pink: #FF00FF;
+
+    --team-flag-horizontal-rule: 27.5px;
+    --team-name-horizontal-rule: calc(150px + var(--team-flag-horizontal-rule) * 2);
+    --score-bar-horizontal-rule: 50%;
+
+    --none: #116649;
+    --red: #db4c4c;
+    --blue: #5b6ac6;
+}
+
+@font-face {
+    font-family: "Lemon Milk";
+    src: url("../fonts/LEMONMILK-Bold.otf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Lemon Milk";
+    src: url("../fonts/LEMONMILK-BoldItalic.otf");
+    font-weight: 700;
+    font-style: italic;
+}
+
+.background-video {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Main Page */
+.main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 1080px;
+    font-family: "Poppins";
+    font-weight: 700;
+}
+
+/* Team Flag */
+.team-flag { position: absolute;}
+.left-flag { left: var(--team-flag-horizontal-rule); }
+.right-flag { right: var(--team-flag-horizontal-rule); }
+
+/* Team Name */
+.team-name {
+    position: absolute;
+    top: 10px;
+    font-size: 3.5rem;
+    color: var(--green);
+}
+.left-team-name { left: var(--team-name-horizontal-rule); }
+.right-team-name { right: var(--team-name-horizontal-rule); }
+
+/* Team Stars */
+.team-star-container {
+    position: absolute;
+    top: 95px;  
+    display: flex;
+}
+.team-star-container > * {
+    width: 50px;
+    transform: rotate(100deg);
+}
+.left-team-star-container { left: var(--team-name-horizontal-rule); }
+.right-team-star-container { 
+    right: var(--team-name-horizontal-rule); 
+    flex-direction: row-reverse;
+}
+
+/* Main Logo */
+.logo {
+    position: relative;
+    top: 20px;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-39%) scale(0.35);
+}
+/* 5 Logo */
+.logo-5 {
+    position: absolute;
+}
+/* Logo WC */
+.logo-wc {
+    position: absolute;
+    top: 3px;
+    left: 256px;
+    font-size: 196px;
+    letter-spacing: -12px;
+    color: var(--secondary-text);
+    filter: drop-shadow(-7.08px 10.903px 0px rgba(0, 0, 0, 0.25));
+}
+/* Logo 2025 */
+.logo-2025 {
+    position: absolute;
+    top: 203px;
+    left: 361px;
+    font-size: 101px;
+    letter-spacing: -4px;
+    color: var(--green);
+    filter: drop-shadow(-2.723px 4.193px 0px rgba(0, 0, 0, 0.25));
+    transform: scale(1, 1.05);
+}
+
+/* Greenscreen */
+.greenscreen {
+    position: absolute;
+    top: 150px;
+    width: inherit;
+    height: 720px;
+    background-color: #0f0;
+}
+
+/* Score Section */
+#score-section {
+    opacity: 1;
+    transition: 500ms ease;
+    font-variant-numeric: tabular-nums lining-nums;
+}
+
+/* Scorebar */
+.score-bar {
+    position: absolute;
+    top: 870px;
+    height: 25px;
+    background-color: var(--green);
+}
+.left-score-bar { right: var(--score-bar-horizontal-rule); }
+.right-score-bar { 
+    left: var(--score-bar-horizontal-rule);
+    width: 200px;
+}
+
+/* Play Score */
+.play-score {
+    position: absolute;
+    top: 900px;
+    font-weight: 600px;
+    color: var(--green);
+    font-size: 2em;
+}
+.left-score { right: 970px; }
+.right-score { left: 970px; }
+.leading-score {
+    top: 899px;
+    font-weight: 800;
+    font-size: 2.5em;
+}
+
+/* Play Score Difference */
+.play-score-difference {
+    position: absolute;
+    top: 940px;
+    font-weight: 500;
+    color: var(--green);
+    font-size: 1.25em;
+}
+.left-score-difference { right: 970px; }
+.right-score-difference { left: 970px; }
+
+/* Chat Display */
+.chat-display {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 190px;
+    border-radius: 10px;
+    background-color: #116649bb;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: 500ms ease;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+.chat-display::-webkit-scrollbar { display: none; }
+
+/* Message Container */
+.message-container {
+    padding: 1px 2px;
+    display: flex;
+    color: var(--secondary-text);
+    font-size: 1.25em;
+    width: inherit;
+}
+.message-time {
+    width: 15%;
+    text-align: center;
+}
+.message-wrapper {
+    width: 92%;
+    display: flex;
+}
+.message-name {
+    margin-right: 10px;
+    white-space: nowrap;
+}
+.unknown { color: rgb(220, 182, 255); }
+.bot { color: gold; }
+.left { color: rgb(255, 176, 176); }
+.right { color: lightblue; }
+
+/* Now Playing Section */
+#now-playing-section {
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+    width: 1820px;
+    height: 80px;
+    border-radius: 50px;
+    background-color: #11664960;
+    border: 5px solid var(--green);
+    overflow: hidden;
+    transition: 500ms ease-in-out;
+}
+
+/* Now Playing Section Logo */
+.now-playing-section-logo {
+    position: absolute;
+    top: 18px;
+    right: 110px;
+    transform: scale(0.15);
+}
+/* 5 Logo */
+.now-playing-logo-5 {
+    position: absolute;
+}
+/* Logo WC */
+.now-playing-logo-wc {
+    position: absolute;
+    top: 3px;
+    left: 256px;
+    font-size: 196px;
+    letter-spacing: -12px;
+    color: var(--secondary-text);
+    filter: drop-shadow(-7.08px 10.903px 0px rgba(0, 0, 0, 0.25));
+}
+/* Logo 2025 */
+.now-playing-logo-2025 {
+    position: absolute;
+    top: 203px;
+    left: 361px;
+    font-size: 101px;
+    letter-spacing: -4px;
+    color: var(--green);
+    filter: drop-shadow(-2.723px 4.193px 0px rgba(0, 0, 0, 0.25));
+    transform: scale(1, 1.05);
+}
+
+/* Now Playing Section Stats */
+.now-playing-section-stats {
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1365px;
+    height: inherit;
+    background-color: #116649A0;
+    border-radius: inherit;
+    color: var(--secondary-text);
+    line-height: 30px;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    transition: 500ms ease-in-out;
+}
+.now-playing-section-stats > * { margin: 10px 40px 0 40px; }
+.now-playing-section-stats-right { text-align: right; }
+.now-playing-stats-number { font-weight: 500; }
+
+/* Now Playing Section Metadata */
+.now-playing-section-metadata {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: inherit;
+    background-color: var(--green);
+    border-radius: inherit;
+    border: 5px solid var(--green);
+    background-image: url("https://assets.ppy.sh/beatmaps/2257992/covers/cover.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: 500ms ease-in-out;
+}
+/* Overlay */
+.now-playing-section-metadata-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: inherit;
+}
+/* Title */
+.now-playing-section-title {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--secondary-text);
+    text-align: center;
+    font-size: 1.5em;
+}
+/* Mapper Difficulty */
+.now-playing-section-mapper-difficulty {
+    position: absolute;
+    top: 35px;
+    color: var(--secondary-text);
+    font-weight: 400;
+    max-width: calc(45% - 25px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.now-playing-section-mapper { right: calc(50% + 25px); }
+.now-playing-section-difficulty { left: calc(50% + 25px); }
+.now-playing-section-mapper-difficulty-name {
+    font-size: 1.5em;
+    font-weight: 700;
+}
