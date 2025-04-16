@@ -93,6 +93,7 @@ let scoreVisible
 
 // Chat Display
 const chatDisplayEl = document.getElementById("chat-display")
+const chatDisplayContainerEl = document.getElementById("chat-display-container")
 let chatLen
 
 // Now Playing Section
@@ -298,7 +299,7 @@ socket.onmessage = event => {
 
     // This is also mostly taken from Victim Crasher: https://github.com/VictimCrasher/static/tree/master/WaveTournament
     if (chatLen !== data.tourney.chat.length) {
-        (chatLen === 0 || chatLen > data.tourney.chat.length) ? (chatDisplayEl.innerHTML = "", chatLen = 0) : null
+        (chatLen === 0 || chatLen > data.tourney.chat.length) ? (chatDisplayContainerEl.innerHTML = "", chatLen = 0) : null
         const fragment = document.createDocumentFragment()
 
         for (let i = chatLen; i < data.tourney.chat.length; i++) {
@@ -333,9 +334,9 @@ socket.onmessage = event => {
             fragment.append(chatMessageContainer)
         }
 
-        chatDisplayEl.append(fragment)
+        chatDisplayContainerEl.append(fragment)
         chatLen = data.tourney.chat.length
-        chatDisplayEl.scrollTop = chatDisplayEl.scrollHeight
+        chatDisplayContainerEl.scrollTop = chatDisplayContainerEl.scrollHeight
     }
 }
 
