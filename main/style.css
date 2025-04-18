@@ -9,9 +9,10 @@
     --team-name-horizontal-rule: calc(95px + var(--team-flag-horizontal-rule) * 2);
     --score-bar-horizontal-rule: 50%;
 
-    --none: #116649;
-    --red: #db4c4c;
-    --blue: #5b6ac6;
+    --none: var(--light-pink);
+    --tiebreaker: var(--pink);
+    --red: red;
+    --blue: blue;
 }
 
 @font-face {

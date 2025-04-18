@@ -1,11 +1,3 @@
-// Load osu! api
-let osuApi
-async function getApi() {
-    const response = await fetch("../_data/osu-api.json")
-    const responseJson = await response.json()
-    osuApi = responseJson.api
-}
-
 // Find Team 
 const findTeam = teamName => allTeams.find(team => team.teamName.toUpperCase() == teamName.toUpperCase())
 
@@ -49,7 +41,6 @@ function toggleStars() {
 
 let allTeams
 async function initialise() {
-    await getApi()
     allTeams = await getTeams()
     await getBeatmaps()
 }
@@ -123,7 +114,8 @@ socket.onmessage = event => {
         leftTeamNameEl.innerText = currentLeftTeamName.toUpperCase()
 
         const team = findTeam(currentLeftTeamName)
-        if (team) leftFlagEl.style.backgroundImage = `url("${team.imageUrl}`
+        if (team && team.imageUrl !== "https://i.imgur.com/NSCK2vS.jpeg") leftFlagEl.style.backgroundImage = `url("https://api.codetabs.com/v1/proxy?quest=${team.imageUrl}")`
+        else if (team) leftFlagEl.style.backgroundImage = `url("../_shared/assets/team-banner/imgur-team-banner.jpeg`
         else leftFlagEl.style.backgroundImage = `url()`
     }
     if (currentRightTeamName != data.tourney.team.right && allTeams) {
@@ -131,7 +123,8 @@ socket.onmessage = event => {
         rightTeamNameEl.innerText = currentRightTeamName.toUpperCase()
 
         const team = findTeam(currentRightTeamName)
-        if (team) rightFlagEl.style.backgroundImage = `url("${team.imageUrl}`
+        if (team && team.imageUrl !== "https://i.imgur.com/NSCK2vS.jpeg") rightFlagEl.style.backgroundImage = `url("https://api.codetabs.com/v1/proxy?quest=${team.imageUrl}")`
+        else if (team) rightFlagEl.style.backgroundImage = `url("../_shared/assets/team-banner/imgur-team-banner.jpeg`
         else rightFlagEl.style.backgroundImage = `url()`
     }
 
@@ -229,11 +222,12 @@ socket.onmessage = event => {
         for (let i = 0; i < data.tourney.clients.length; i++) {
             const currentPlayer = data.tourney.clients[i]
             let currentScore = currentPlayer.play.score            
-            // Check for EZ, EZHD, and multiplier
-            if (currentMappoolBeatmap && currentMappoolBeatmap.mod === "FM") {
+            // Check for EZ, FL, and EZFL Multi
+            if (currentMappoolBeatmap && (currentMappoolBeatmap.mod.includes("FM") || currentMappoolBeatmap.mod.includes("FCM"))) {
                 const mods = getMods(currentPlayer.play.mods.number)
-                if (mods.includes("EZ") && mods.includes("HD")) currentScore *= currentMappoolBeatmap.EZHDMulti
+                if (mods.includes("EZ") && mods.includes("FL")) currentScore *= 2.5
                 else if (mods.includes("EZ")) currentScore *= currentMappoolBeatmap.EZMulti
+                else if (mods.includes("FL")) currentScore *= 1.4
             }
 
             // Add score to correct team
@@ -343,14 +337,12 @@ function displayLength(second) {
 // Picker Colour
 let pickerColour
 setInterval(() => {
-    const currentPickerColour = getCookie("currentTeamPick")
-    if (currentMappoolBeatmap && currentMappoolBeatmap.mod === "TB") {
-        nowPlayingSection.style.borderColor = `var(--green)`
-    } else if (currentMappoolBeatmap && currentPickerColour !== pickerColour) {
+    const currentPickerColour = getCookie("currentPicker")
+    if (currentMappoolBeatmap && currentPickerColour !== pickerColour) {
         pickerColour = currentPickerColour
-        nowPlayingSection.style.borderColor = `var(--${pickerColour})`        
+        nowPlayingSection.style.borderColor = `var(--${pickerColour})` 
     } else if (!currentMappoolBeatmap) {
-        document.cookie = `currentTeamPick=none; path=/`
+        document.cookie = `currentPicker=none; path=/`
     }
 
     // Get stars

@@ -7,7 +7,8 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <script src="../_shared/deps/countUp.js"></script>
+    <script src="../_shared/deps/reconnecting-websocket.min.js"></script>
+    <script src="../_shared/utils.js"></script>
 </head>
 <body>
     <video class="background-video" autoplay loop muted>
@@ -45,15 +46,7 @@
 
         <!-- Mappool Section -->
         <section class="mappool-section" id="mappool-section">
-            <div class="map-wrapper">
-                <div class="map-title"></div>
-                <div class="map-bottom-row">
-                    <span class="map-mapper-text"></span>
-                    <span class="map-mapper-name"></span>
-                    <span class="map-difficulty-text"></span>
-                    <span class="map-difficulty-name"></span>
-                </div>
-            </div>
+            <div class="mappool-container" id="mappool-container"></div>
         </section>
 
         <!-- Chat Display -->
@@ -61,5 +54,39 @@
             <div class="chat-display-container" id="chat-display-container"></div>
         </div>
     </div>
+
+    <div class="sidebar">
+        <section class="sidebar-section">
+            <div class="sidebar-title">Star Section</div>
+            <div class="sidebar-button-container">
+                <button class="sidebar-button" onclick="updateStarCount('red', 'minus')">RED --</button>
+                <button class="sidebar-button" onclick="updateStarCount('red', 'plus')">RED ++</button>
+                <button class="sidebar-button" onclick="updateStarCount('blue', 'minus')">BLUE --</button>
+                <button class="sidebar-button" onclick="updateStarCount('blue', 'plus')">BLUE ++</button>
+                <button class="sidebar-button sidebar-button-full" id="toggle-stars" onclick="toggleStars()">TOGGLE STARS: ON</button>
+            </div>
+        </section>
+        <section class="sidebar-section">
+            <div class="sidebar-title">Mappool Section</div>
+            <div class="sidebar-text">
+                Left Click (LC) = Red Pick<br>
+                Right Click (LC) = Blue Pick<br>
+                Ctrl + LC = Red Ban<br>
+                Ctrl + RC = Blue Ban<br>
+                Shift + Click = Reset<br>
+                Alt + Click = Tiebreaker<br><br>
+            </div>
+            <div class="sidebar-title">Next Picker</div>
+            <div class="sidebar-text" id="next-auto-picker-team"></div><br><br>
+            <div class="sidebar-button-container">
+                <button class="sidebar-button" onclick="updateNextAutoPicker('red')">RED</button>
+                <button class="sidebar-button" onclick="updateNextAutoPicker('blue')">BLUE</button>
+                <button class="sidebar-button sidebar-button-full" onclick="updateNextAutoPicker('tiebreaker')">Tiebreaker</button>
+                <button class="sidebar-button sidebar-button-full" id="toggle-autopick" onclick="toggleAutopick()">TOGGLE AUTOPICK: OFF</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="index.js"></script>
 </body>
 </html>

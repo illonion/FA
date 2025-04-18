@@ -21,6 +21,16 @@
 }
 @font-face {
     font-family: "Lemon Milk";
+    src: url("../fonts/LEMONMILK-Medium.otf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Lemon Milk";
+    src: url("../fonts/LEMONMILK-Regular.otf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Lemon Milk";
     src: url("../fonts/LEMONMILK-BoldItalic.otf");
     font-weight: 700;
     font-style: italic;
@@ -88,6 +98,132 @@
     top: 150px;
     width: inherit;
     height: 720px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Mappool Container */
+.mappool-container {
+    width: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+/* Map Wrapper */
+.map-wrapper {
+    position: relative;
+    width: 500px;
+    height: 60px;
+    background-image: url("https://assets.ppy.sh/beatmaps/1923744/covers/cover.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px;
+    color: white;
+    overflow: hidden;
+    font-size: 14px;
+}
+/* Map Overlay */
+.map-overlay {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: rgba(0,0,0,0.5);
+}
+/* Map Title */
+.map-title {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    width: 360px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* Map Bottom Row */
+.map-bottom-row {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    width: 360px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* Mapper and Text */
+.map-mapper-text, .map-difficulty-text {
+    font-weight: 400;
+    font-size: 10px;
+}
+.map-difficulty-text { margin-left: 25px; }
+/* Mapper and Difficulty Name */
+.map-mapper-name, .map-difficulty-name {
+    margin-left: 5px;
+}
+/* Map Mod Icon */
+.map-mod-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 90px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: darkslategray;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.map-mod-icon-nm { color: lightgray; }
+.map-mod-icon-hd { color: rgb(255, 241, 151); }
+.map-mod-icon-hr { color: rgb(255, 151, 151); }
+.map-mod-icon-ez { color: rgb(191, 255, 151); }
+.map-mod-icon-dt { color: rgb(161, 151, 255); }
+.map-mod-icon-fcm { color: rgb(243, 151, 255); }
+.map-mod-icon-fm { color: rgb(151, 255, 243); }
+/* Map Mod Overall Overlay */
+.map-mod-overall-overlay {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: rgba(0,0,0,0.7);
+    opacity: 0;
+}
+/* Map Action Overlay */
+.map-action-overlay {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 5px;
+    opacity: 0;
+}
+.map-action-base {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background-color: white;
+    opacity: 0;
+}
+.map-action-pick-animation { 
+    animation: fadeInAndOutBig 500ms 10;
+}
+.map-action-ban-animation {
+    animation: fadeInAndOutSmall 500ms 10;
+}
+@keyframes fadeInAndOutBig {
+    0% { opacity: 0; }
+    20% { opacity: 0.8; }
+    100% { opacity: 0; }
+}
+@keyframes fadeInAndOutSmall {
+    0% { opacity: 0; }
+    20% { opacity: 0.4; }
+    100% { opacity: 0; }
 }
 
 /* Chat Display */
@@ -139,3 +275,59 @@
 .bot { color: darkmagenta; }
 .left { color: darkred; }
 .right { color: darkblue; }
+
+/* Sidebar */
+.sidebar {
+    position: absolute;
+    top: 0px;
+    left: 1920px;
+    width: 250px;
+    height: 1080px;
+    background-color: var(--purple);
+    color: white;
+    font-family: "Lemon Milk";
+    font-weight: 700;
+}
+/* Sidebar Title */
+.sidebar-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: inherit;
+    text-align: center;
+}
+/* Sidebar Section */
+.sidebar-section {
+    padding-bottom: 30px;
+    border-bottom: 3px solid white;
+}
+/* Sidebar Button Container */
+.sidebar-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.sidebar-button {
+    width: 100px;
+    height: 50px;
+    color: white;
+    font-family: "Lemon Milk";
+    font-weight: 700;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 3px solid white;
+}
+.sidebar-button-full {
+    width: 210px;
+}
+.sidebar-button:active {
+    color: var(--purple);
+    background-color: white;
+}
+/* Sidebar Text */
+.sidebar-text {
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+}
