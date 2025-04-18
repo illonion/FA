@@ -120,32 +120,19 @@ socket.onmessage = event => {
     // Team Names
     if (currentLeftTeamName != data.tourney.team.left && allTeams) {
         currentLeftTeamName = data.tourney.team.left
-        if (currentLeftTeamName.toLowerCase() === "russia") currentLeftTeamName = "russian federation"
-        if (currentLeftTeamName.toLowerCase() === "uae") currentLeftTeamName = "united arab emirates"
-        if (currentLeftTeamName.toLowerCase() === "russian federation") leftTeamNameEl.innerText = "RUSSIA"
-        else if (currentLeftTeamName.toLowerCase() === "united arab emirates") leftTeamNameEl.innerText = "UAE"
-        else leftTeamNameEl.innerText = currentLeftTeamName.toUpperCase()
-        document.cookie = `currentLeftTeamName=${currentLeftTeamName}; path=/`
- 
-        if (currentLeftTeamName.toLowerCase() === "russian federation") leftTeamNameEl.innerText = "RUSSIA"
-        if (currentLeftTeamName.toLowerCase() === "united arab emirates") leftTeamNameEl.innerText = "UAE"
+        leftTeamNameEl.innerText = currentLeftTeamName.toUpperCase()
 
         const team = findTeam(currentLeftTeamName)
-        if (team) leftFlagEl.setAttribute("src", `https://osuflags.omkserver.nl/${team.flag_code}-150.png`)
-        else leftFlagEl.setAttribute("src", "")
+        if (team) leftFlagEl.style.background = `url("${team.imageUrl}`
+        else leftFlagEl.style.background = `url()`
     }
     if (currentRightTeamName != data.tourney.team.right && allTeams) {
         currentRightTeamName = data.tourney.team.right
-        if (currentRightTeamName.toLowerCase() === "russia") currentRightTeamName = "russian federation"
-        if (currentRightTeamName.toLowerCase() === "uae") currentRightTeamName = "united arab emirates"
-        if (currentRightTeamName.toLowerCase() === "russian federation") rightTeamNameEl.innerText = "RUSSIA"
-        else if (currentRightTeamName.toLowerCase() === "united arab emirates") rightTeamNameEl.innerText = "UAE"
-        else rightTeamNameEl.innerText = currentRightTeamName.toUpperCase()
-        document.cookie = `currentRightTeamName=${currentRightTeamName}; path=/`
+        rightTeamNameEl.innerText = currentRightTeamName.toUpperCase()
 
         const team = findTeam(currentRightTeamName)
-        if (team) rightFlagEl.setAttribute("src", `https://osuflags.omkserver.nl/${team.flag_code}-150.png`)
-        else rightFlagEl.setAttribute("src", "")
+        if (team) rightFlagEl.style.background = `url("${team.imageUrl}`
+        else rightFlagEl.style.background = `url()`
     }
 
     // Beatmap checking

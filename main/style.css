@@ -76,36 +76,12 @@
 
 /* Main Logo */
 .logo {
-    position: relative;
+    position: absolute;
     top: 20px;
     left: 50%;
     z-index: 1;
-    transform: translateX(-39%) scale(0.35);
-}
-/* 5 Logo */
-.logo-5 {
-    position: absolute;
-}
-/* Logo WC */
-.logo-wc {
-    position: absolute;
-    top: 3px;
-    left: 256px;
-    font-size: 196px;
-    letter-spacing: -12px;
-    color: var(--secondary-text);
-    filter: drop-shadow(-7.08px 10.903px 0px rgba(0, 0, 0, 0.25));
-}
-/* Logo 2025 */
-.logo-2025 {
-    position: absolute;
-    top: 203px;
-    left: 361px;
-    font-size: 101px;
-    letter-spacing: -4px;
-    color: var(--green);
-    filter: drop-shadow(-2.723px 4.193px 0px rgba(0, 0, 0, 0.25));
-    transform: scale(1, 1.05);
+    transform: translateX(-50%);
+    height: 110px;
 }
 
 /* Greenscreen */
