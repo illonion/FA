@@ -7,7 +7,7 @@ async function getApi() {
 }
 
 // Find Team 
-const findTeam = teamName => allTeams.find(team => team.country_name.toUpperCase() == teamName.toUpperCase())
+const findTeam = teamName => allTeams.find(team => team.teamName.toUpperCase() == teamName.toUpperCase())
 
 // Get beatmaps
 let currentBestOf = 0, currentFirstTo = 0, currentLeftStars = 0, currentRightStars = 0
@@ -123,16 +123,16 @@ socket.onmessage = event => {
         leftTeamNameEl.innerText = currentLeftTeamName.toUpperCase()
 
         const team = findTeam(currentLeftTeamName)
-        if (team) leftFlagEl.style.background = `url("${team.imageUrl}`
-        else leftFlagEl.style.background = `url()`
+        if (team) leftFlagEl.style.backgroundImage = `url("${team.imageUrl}`
+        else leftFlagEl.style.backgroundImage = `url()`
     }
     if (currentRightTeamName != data.tourney.team.right && allTeams) {
         currentRightTeamName = data.tourney.team.right
         rightTeamNameEl.innerText = currentRightTeamName.toUpperCase()
 
         const team = findTeam(currentRightTeamName)
-        if (team) rightFlagEl.style.background = `url("${team.imageUrl}`
-        else rightFlagEl.style.background = `url()`
+        if (team) rightFlagEl.style.backgroundImage = `url("${team.imageUrl}`
+        else rightFlagEl.style.backgroundImage = `url()`
     }
 
     // Beatmap checking
@@ -372,18 +372,18 @@ function createStarDisplay() {
     rightTeamStarContainerEl.innerHTML = ""
 
     let i = 0
-    for (i; i < currentLeftStars; i++) leftTeamStarContainerEl.append(createStar("full"))
+    for (i; i < currentLeftStars; i++) leftTeamStarContainerEl.append(createStar("fill"))
     for (i; i < currentFirstTo; i++) leftTeamStarContainerEl.append(createStar("empty"))
 
     i = 0
-    for (i; i < currentRightStars; i++) rightTeamStarContainerEl.append(createStar("full"))
+    for (i; i < currentRightStars; i++) rightTeamStarContainerEl.append(createStar("fill"))
     for (i; i < currentFirstTo; i++) rightTeamStarContainerEl.append(createStar("empty"))
 
     // Create Star
     function createStar(status) {
         const newStar = document.createElement("img")
-        newStar.classList.add("team-stard")
-        newStar.setAttribute("src", `static/star-${status}.png`)
+        newStar.classList.add("team-star")
+        if (status === "fill") newStar.setAttribute("src", `static/star-fill.png`)
         return newStar
     }
 }

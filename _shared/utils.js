@@ -25,7 +25,7 @@ function getCookie(cname) {
 }
 
 async function getTeams() {
-    const response = await fetch("../_data/predictions.json")
+    const response = await fetch("../_data/teams.json")
     const responseJson = await response.json()
     let allTeams = responseJson
     return allTeams

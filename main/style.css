@@ -6,7 +6,7 @@
     --pink: #FF00FF;
 
     --team-flag-horizontal-rule: 27.5px;
-    --team-name-horizontal-rule: calc(150px + var(--team-flag-horizontal-rule) * 2);
+    --team-name-horizontal-rule: calc(95px + var(--team-flag-horizontal-rule) * 2);
     --score-bar-horizontal-rule: 50%;
 
     --none: #116649;
@@ -44,7 +44,14 @@
 }
 
 /* Team Flag */
-.team-flag { position: absolute;}
+.team-flag {
+    position: absolute;
+    top: 27.5px;
+    width: 95px;
+    height: 95px;
+    background-size: cover;
+    background-position: center;
+}
 .left-flag { left: var(--team-flag-horizontal-rule); }
 .right-flag { right: var(--team-flag-horizontal-rule); }
 
@@ -61,12 +68,13 @@
 /* Team Stars */
 .team-star-container {
     position: absolute;
-    top: 95px;  
+    top: 85px;  
     display: flex;
+    gap: 10px;
 }
-.team-star-container > * {
-    width: 50px;
-    transform: rotate(100deg);
+.team-star-container img {
+    width: 38px;
+    height: 38px;
 }
 .left-team-star-container { left: var(--team-name-horizontal-rule); }
 .right-team-star-container { 
