@@ -17,19 +17,15 @@ async function getBeatmaps() {
     for (let i = 0; i < allBeatmaps.length; i++) {
         // Set mod number
         let modNumber = 0
-        if (allBeatmaps[i].mod === "HR") modNumber = 16
-        else if (allBeatmaps[i].mod === "DT") modNumber = 64
+        if (allBeatmaps[i].mod.includes("HR")) modNumber += 16
+        if (allBeatmaps[i].mod.includes("EZ")) modNumber += 2
+        if (allBeatmaps[i].mod.includes("DT")) modNumber = 64
         
         // Get API response
         const response = await fetch(`https://api.codetabs.com/v1/proxy?quest=` + encodeURIComponent(`https://osu.ppy.sh/api/get_beatmaps?k=${osuApi}&b=${allBeatmaps[i].beatmap_id}&mods=${modNumber}`))
         await delay(1000)
         let responseJson = await response.json()
         responseJson[0].mod = allBeatmaps[i].mod
-        responseJson[0].order = allBeatmaps[i].order
-        if (allBeatmaps[i].EZMulti) {
-            responseJson[0].EZMulti = allBeatmaps[i].EZMulti
-            responseJson[0].EZHDMulti = allBeatmaps[i].EZHDMulti
-        }
         
         allBeatmapsJson.push(responseJson[0])
 

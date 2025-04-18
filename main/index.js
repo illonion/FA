@@ -157,20 +157,26 @@ socket.onmessage = event => {
             let currentBpm = Number(currentMappoolBeatmap.bpm)
             let currentLength = Number(currentMappoolBeatmap.hit_length)
             nowPlayingStatsSrEl.innerText = currentSr
-            switch (currentMappoolBeatmap.mod) {
-                case "HR":
-                    currentCs = Math.min(Math.round(Number(currentMappoolBeatmap.diff_size) * 1.3 * 10) / 10, 10)
-                    currentAr = Math.min(Math.round(Number(currentMappoolBeatmap.diff_approach) * 1.4 * 10) / 10, 10)
-                    currentOd = Math.min(Math.round(Number(currentMappoolBeatmap.diff_overall) * 1.4 * 10) / 10, 10)
-                    break
-                case "DT":
-                    if (currentAr > 5) currentAr = Math.round((((1200 - (( 1200 - (currentAr - 5) * 150) * 2 / 3)) / 150) + 5) * 10) / 10
-                    else currentAr = Math.round((1800 - ((1800 - currentAr * 120) * 2 / 3)) / 120 * 10) / 10
-                    currentOd = Math.round((79.5 - (( 79.5 - 6 * currentOd) * 2 / 3)) / 6 * 10) / 10
-                    currentBpm = Math.round(currentBpm * 1.5)
-                    currentLength = Math.round(currentLength / 1.5)
-                    break
+
+            // Set mods
+            if (currentMappoolBeatmap.mod.includes("HR")) {
+                currentCs = Math.min(Math.round(Number(currentCs) * 1.3 * 10) / 10, 10)
+                currentAr = Math.min(Math.round(Number(currentAr) * 1.4 * 10) / 10, 10)
+                currentOd = Math.min(Math.round(Number(currentOd) * 1.4 * 10) / 10, 10)
             }
+            if (currentMappoolBeatmap.mod.includes("EZ")) {
+                currentCs /= 2
+                currentAr /= 2
+                currentOd /= 2
+            }
+            if (currentMappoolBeatmap.mod.includes("DT")) {
+                if (currentAr > 5) currentAr = Math.round((((1200 - (( 1200 - (currentAr - 5) * 150) * 2 / 3)) / 150) + 5) * 10) / 10
+                else currentAr = Math.round((1800 - ((1800 - currentAr * 120) * 2 / 3)) / 120 * 10) / 10
+                currentOd = Math.round((79.5 - (( 79.5 - 6 * currentOd) * 2 / 3)) / 6 * 10) / 10
+                currentBpm = Math.round(currentBpm * 1.5)
+                currentLength = Math.round(currentLength / 1.5)
+            }
+
             nowPlayingStatsCsEl.innerText = currentCs
             nowPlayingStatsArEl.innerText = currentAr
             nowPlayingStatsOdEl.innerText = currentOd
@@ -383,7 +389,7 @@ function createStarDisplay() {
     function createStar(status) {
         const newStar = document.createElement("img")
         newStar.classList.add("team-star")
-        if (status === "fill") newStar.setAttribute("src", `static/star-fill.png`)
+        newStar.setAttribute("src", `../_shared/assets/star-${status}.png`)
         return newStar
     }
 }
