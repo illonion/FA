@@ -220,34 +220,10 @@
 /* Now Playing Section Logo */
 .now-playing-section-logo {
     position: absolute;
-    top: 18px;
-    right: 110px;
-    transform: scale(0.15);
-}
-/* 5 Logo */
-.now-playing-logo-5 {
-    position: absolute;
-}
-/* Logo WC */
-.now-playing-logo-wc {
-    position: absolute;
-    top: 3px;
-    left: 256px;
-    font-size: 196px;
-    letter-spacing: -12px;
-    color: var(--secondary-text);
-    filter: drop-shadow(-7.08px 10.903px 0px rgba(0, 0, 0, 0.25));
-}
-/* Logo 2025 */
-.now-playing-logo-2025 {
-    position: absolute;
-    top: 203px;
-    left: 361px;
-    font-size: 101px;
-    letter-spacing: -4px;
-    color: var(--green);
-    filter: drop-shadow(-2.723px 4.193px 0px rgba(0, 0, 0, 0.25));
-    transform: scale(1, 1.05);
+    top: 50%;
+    right: 20px;
+    height: 60px;
+    transform: translateY(-50%);
 }
 
 /* Now Playing Section Stats */
