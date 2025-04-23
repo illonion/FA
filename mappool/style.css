@@ -6,7 +6,7 @@
     --pink: #FF00FF;
 
     --team-flag-horizontal-rule: 27.5px;
-    --team-name-horizontal-rule: calc(95px + var(--team-flag-horizontal-rule) * 2);
+    --team-name-horizontal-rule: calc(107px + var(--team-flag-horizontal-rule) * 2);
     --score-bar-horizontal-rule: 50%;
 
     --none: #116649;
@@ -56,11 +56,14 @@
 /* Team Flag */
 .team-flag {
     position: absolute;
+    border: 10px solid var(--light-pink);
     top: 27.5px;
-    width: 95px;
-    height: 95px;
+    width: 125px;
+    height: 80px;
+    background-color: var(--light-pink);
     background-size: cover;
     background-position: center;
+    border-radius: 20px;
 }
 .left-flag { left: var(--team-flag-horizontal-rule); }
 .right-flag { right: var(--team-flag-horizontal-rule); }
@@ -68,12 +71,25 @@
 /* Team Name */
 .team-name {
     position: absolute;
-    top: 10px;
-    font-size: 3.5rem;
-    color: var(--light-pink);
+    top: 43px;
+    color: var(--purple);
+    background-color: vaR(--light-pink);
+    width: 300px;
+    height: 20px;
+    border: 5px solid var(--light-pink);
+    line-height: 20px;
 }
-.left-team-name { left: var(--team-name-horizontal-rule); }
-.right-team-name { right: var(--team-name-horizontal-rule); }
+.left-team-name { 
+    left: var(--team-name-horizontal-rule); 
+    border-radius: 0 20px 20px 0;
+    border-left: 20px solid var(--light-pink);
+}
+.right-team-name { 
+    right: var(--team-name-horizontal-rule);
+    border-radius: 20px 0 0 20px;
+    text-align: right;
+    border-right: 20px solid var(--light-pink);
+}
 
 /* Team Stars */
 .team-star-container {
@@ -83,12 +99,12 @@
     gap: 10px;
 }
 .team-star-container img {
-    width: 38px;
-    height: 38px;
+    width: 30px;
+    height: 30px;
 }
-.left-team-star-container { left: var(--team-name-horizontal-rule); }
+.left-team-star-container { left: calc(var(--team-name-horizontal-rule) + 20px); }
 .right-team-star-container { 
-    right: var(--team-name-horizontal-rule); 
+    right: calc(var(--team-name-horizontal-rule) + 20px); 
     flex-direction: row-reverse;
 }
 

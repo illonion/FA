@@ -224,7 +224,7 @@ socket.onmessage = event => {
             let currentScore = currentPlayer.play.score            
             // Check for EZ, FL, and EZFL Multi
             if (currentMappoolBeatmap && (currentMappoolBeatmap.mod.includes("FM") || currentMappoolBeatmap.mod.includes("FCM"))) {
-                const mods = getMods(currentPlayer.play.mods.number)
+                const mods = currentPlayer.play.mods.name
                 if (mods.includes("EZ") && mods.includes("FL")) currentScore *= 2.5
                 else if (mods.includes("EZ")) currentScore *= currentMappoolBeatmap.EZMulti
                 else if (mods.includes("FL")) currentScore *= 1.4
