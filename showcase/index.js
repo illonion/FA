@@ -5,8 +5,7 @@ let allBeatmaps
 async function getBeatmaps() {
     const response = await fetch("../_data/showcase-beatmaps.json")
     const responseJson = await response.json()
-    allBeatmaps = responseJson.beatmaps    
-    
+    allBeatmaps = responseJson.beatmaps
 
     for (let i = 0; i < allBeatmaps.length; i++) {
         const newMapTitle = document.createElement("div")

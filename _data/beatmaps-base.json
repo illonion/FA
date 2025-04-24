@@ -1,18 +1,18 @@
 {
-    "roundName": "ROUND OF 32",
+    "roundName": "ROUND OF 16",
     "beatmaps": [
-        {"beatmap_id": 894409, "mod": "NM", "EZMulti": 1},
-        {"beatmap_id": 2919092, "mod": "NM", "EZMulti": 1},
-        {"beatmap_id": 4508508, "mod": "HD", "EZMulti": 1},
-        {"beatmap_id": 4753270, "mod": "HR", "EZMulti": 1},
-        {"beatmap_id": 2382647, "mod": "HR", "EZMulti": 1},
-        {"beatmap_id": 3971358, "mod": "EZDT", "EZMulti": 1},
-        {"beatmap_id": 4392103, "mod": "FM", "EZMulti": 1.5},
-        {"beatmap_id": 2258818, "mod": "NM", "EZMulti": 1},
-        {"beatmap_id": 4209387, "mod": "NM", "EZMulti": 1},
-        {"beatmap_id": 4813481, "mod": "DT", "EZMulti": 1},
-        {"beatmap_id": 3772612, "mod": "HD", "EZMulti": 1},
-        {"beatmap_id": 3950704, "mod": "DT", "EZMulti": 1},
-        {"beatmap_id": 655794, "mod": "FCM", "EZMulti": 2.5}
+        {"beatmap_id": 4567969, "mod": "HD", "EZMulti": 1},
+        {"beatmap_id": 1975886, "mod": "FM", "EZMulti": 2.4},
+        {"beatmap_id": 4522361, "mod": "DTFM", "EZMulti": 1.6},
+        {"beatmap_id": 1402711, "mod": "HRFM", "EZMulti": 1},
+        {"beatmap_id": 2633812, "mod": "NM", "EZMulti": 1},
+        {"beatmap_id": 3744533, "mod": "HD", "EZMulti": 1},
+        {"beatmap_id": 4704402, "mod": "NM", "EZMulti": 1.5},
+        {"beatmap_id": 4652670, "mod": "FM", "EZMulti": 1.8},
+        {"beatmap_id": 4199290, "mod": "DT", "EZMulti": 1},
+        {"beatmap_id": 3591933, "mod": "HR", "EZMulti": 1},
+        {"beatmap_id": 5084384, "mod": "NM", "EZMulti": 1},
+        {"beatmap_id": 3853310, "mod": "DT", "EZMulti": 1},
+        {"beatmap_id": 3960425, "mod": "NM", "EZMulti": 2.5}
     ]
 }
