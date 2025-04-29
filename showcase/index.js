@@ -9,11 +9,8 @@ async function getBeatmaps() {
 
     for (let i = 0; i < allBeatmaps.length; i++) {
         const newMapTitle = document.createElement("div")
-        const newSongName = allBeatmaps[i].songName
-        const newSongDifficulty = allBeatmaps[i].difficultyName
-        newMapTitle.setAttribute("id", `${newSongName}_${newSongDifficulty}`)
-        if (allBeatmaps[i].modId.toUpperCase().includes("TB")) newMapTitle.innerText = "TB"
-        else newMapTitle.innerText = allBeatmaps[i].modId.toUpperCase()
+        newMapTitle.setAttribute("id", `${allBeatmaps[i].beatmapId}`)
+        newMapTitle.innerText = allBeatmaps[i].modId.toUpperCase()
         
         if (i == 0) newMapTitle.classList.add("map-slide-current")
         else if (i == 1) newMapTitle.classList.add("map-slide-right", "map-slide-left-right")
@@ -71,7 +68,6 @@ const lengthnumberEl = document.getElementById("length-number")
 
 socket.onmessage = async event => {
     const data = JSON.parse(event.data)
-    console.log(data)
 
     // Replayer name
     if (replayerName !== data.resultsScreen.playerName && data.resultsScreen.playerName !== "") {
@@ -96,7 +92,7 @@ socket.onmessage = async event => {
 
         // Update "toMapSlot"
         previousToMapSlot = toMapSlot
-        toMapSlot = allBeatmaps.findIndex(beatmap => beatmap.songName.toLowerCase() === data.beatmap.title.toLowerCase() && beatmap.difficultyName.toLowerCase() === data.beatmap.version.toLowerCase())
+        toMapSlot = allBeatmaps.findIndex(beatmap => beatmap.beatmapId === data.beatmap.id)
         if (toMapSlot === -1) toMapSlot = previousToMapSlot
 
         // Calculate difference between number of slots

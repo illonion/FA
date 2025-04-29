@@ -1,94 +1,64 @@
 {
-    "roundName": "qualifiers",
+    "roundName": "QUARTERFINALS",
     "beatmaps": [
         {
-            "songName": "Fly",
-            "difficultyName": "Fly! '11",
-            "mapper": "Aranel",
+            "beatmapId": 3606082,
             "modId": "1EZDT"
         },
         {
-            "songName": "Souzou no Ame",
-            "difficultyName": "Surgis & Hamano's Wet Dreams",
-            "mapper": "Surgis",
+            "beatmapId": 4545983,
             "modId": "2NM"
         },
         {
-            "songName": "I Worship Onlt What You Bleed",
-            "difficultyName": "Extra",
-            "mapper": "Mazzerin",
+            "beatmapId": 3817199,
             "modId": "3NM"
         },
         {
-            "songName": "Enjoy the Silence",
-            "difficultyName": "Insane",
-            "mapper": "K4L1",
+            "beatmapId": 3346091,
             "modId": "4DT"
         },
         {
-            "songName": "perthed again (yambabom remix)",
-            "difficultyName": "Zapy's Extra",
-            "mapper": "Asphyxia",
+            "beatmapId": 611753,
             "modId": "5HD"
         },
         {
-            "songName": "LADYBUG",
-            "difficultyName": "Rebirth",
-            "mapper": "RLC",
+            "beatmapId": 2965623,
             "modId": "6HR"
         },
         {
-            "songName": "MAKE IT FUNKY NOW",
-            "difficultyName": "WERF'S EXTRA",
-            "mapper": "Wispy",
+            "beatmapId": 5045936,
             "modId": "7FM"
         },
         {
-            "songName": "GOTTASADAE",
-            "difficultyName": "GODLIKE",
-            "mapper": "flake",
+            "beatmapId": 3426456,
             "modId": "8NM"
         },
         {
-            "songName": "Gensoukyoku Dai Ichiban - Furie -",
-            "difficultyName": "Extra",
-            "mapper": "FullRain88",
+            "beatmapId": 1519543,
             "modId": "9HD"
         },
         {
-            "songName": "Celsus (LONG VERSION)",
-            "difficultyName": "Insane",
-            "mapper": "Elcheer",
+            "beatmapId": 4793444,
             "modId": "10DT"
         },
         {
-            "songName": "Resolution",
-            "difficultyName": "Vacuum",
-            "mapper": "Megafan",
+            "beatmapId": 4847498,
             "modId": "11NM"
         },
         {
-            "songName": "Cigarettes In The Theatre",
-            "difficultyName": "Blinding Light",
-            "mapper": "Fisky",
+            "beatmapId": 3155970,
             "modId": "12HR"
         },
         {
-            "songName": "Amethyst Aurora",
-            "difficultyName": "ajmosca's Expert",
-            "mapper": "fanzhen0019",
+            "beatmapId": 4500092,
             "modId": "13NM"
         },
         {
-            "songName": "Remember Me",
-            "difficultyName": "Kin's Entwinement of Darkness",
-            "mapper": "Bara-",
+            "beatmapId": 1191979,
             "modId": "14DT"
         },
         {
-            "songName": "Beyond the Eternity",
-            "difficultyName": "Despair",
-            "mapper": "Hishiro Chizuru",
+            "beatmapId": 2522651,
             "modId": "15NM"
         }
     ]
