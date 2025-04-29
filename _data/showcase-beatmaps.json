@@ -2,88 +2,94 @@
     "roundName": "qualifiers",
     "beatmaps": [
         {
-            "songName": "The Order...",
-            "difficultyName": "PUNISHMENT...",
-            "mapper": "pnky",
-            "modId": "NM1"
+            "songName": "Fly",
+            "difficultyName": "Fly! '11",
+            "mapper": "Aranel",
+            "modId": "1EZDT"
         },
         {
-            "songName": "Troposphere",
-            "difficultyName": "Into the Stratosphere",
-            "mapper": "Astronic",
-            "modId": "NM2"
+            "songName": "Souzou no Ame",
+            "difficultyName": "Surgis & Hamano's Wet Dreams",
+            "mapper": "Surgis",
+            "modId": "2NM"
         },
         {
-            "songName": "Resist",
-            "difficultyName": "Expert",
-            "mapper": "Kine",
-            "modId": "NM3"
+            "songName": "I Worship Onlt What You Bleed",
+            "difficultyName": "Extra",
+            "mapper": "Mazzerin",
+            "modId": "3NM"
         },
         {
-            "songName": "Neuron",
-            "difficultyName": "Feiri x Nanachi's Collab Expert",
-            "mapper": "Feiri",
-            "modId": "NM4"
+            "songName": "Enjoy the Silence",
+            "difficultyName": "Insane",
+            "mapper": "K4L1",
+            "modId": "4DT"
         },
         {
-            "songName": "LUVORATORRRRRY! ver Reol feat. nqrse",
-            "difficultyName": "Beasty Gimmick",
-            "mapper": "Ryuusei Aika",
-            "modId": "NM5"
+            "songName": "perthed again (yambabom remix)",
+            "difficultyName": "Zapy's Extra",
+            "mapper": "Asphyxia",
+            "modId": "5HD"
         },
         {
-            "songName": "Guerilla Radio",
-            "difficultyName": "Lights Out",
-            "mapper": "VINXIS",
-            "modId": "HD1"
+            "songName": "LADYBUG",
+            "difficultyName": "Rebirth",
+            "mapper": "RLC",
+            "modId": "6HR"
         },
         {
-            "songName": "Darling Dance",
-            "difficultyName": "Sea Food Extra",
-            "mapper": "Kuro Fuyusaki",
-            "modId": "HD2"
+            "songName": "MAKE IT FUNKY NOW",
+            "difficultyName": "WERF'S EXTRA",
+            "mapper": "Wispy",
+            "modId": "7FM"
         },
         {
-            "songName": "Mafain",
-            "difficultyName": "expert",
-            "mapper": "procq",
-            "modId": "HD3"
+            "songName": "GOTTASADAE",
+            "difficultyName": "GODLIKE",
+            "mapper": "flake",
+            "modId": "8NM"
         },
         {
-            "songName": "STORIA",
-            "difficultyName": "My Story",
-            "mapper": "- AzRaeL -",
-            "modId": "HR1"
+            "songName": "Gensoukyoku Dai Ichiban - Furie -",
+            "difficultyName": "Extra",
+            "mapper": "FullRain88",
+            "modId": "9HD"
         },
         {
-            "songName": "Deer Dance",
-            "difficultyName": "Atrocity",
-            "mapper": "AdeAAa",
-            "modId": "HR2"
+            "songName": "Celsus (LONG VERSION)",
+            "difficultyName": "Insane",
+            "mapper": "Elcheer",
+            "modId": "10DT"
         },
         {
-            "songName": "HERE COMES HOPE",
-            "difficultyName": "Refrain",
-            "mapper": "newton-",
-            "modId": "HR3"
+            "songName": "Resolution",
+            "difficultyName": "Vacuum",
+            "mapper": "Megafan",
+            "modId": "11NM"
         },
         {
-            "songName": "As It Was",
-            "difficultyName": "In this world, it's just us <3",
-            "mapper": "Kyouren",
-            "modId": "DT1"
+            "songName": "Cigarettes In The Theatre",
+            "difficultyName": "Blinding Light",
+            "mapper": "Fisky",
+            "modId": "12HR"
         },
         {
-            "songName": "Ura-Omote Lovers feat. Hatsune Miku",
-            "difficultyName": "Doinkus",
-            "mapper": "jellium",
-            "modId": "DT2"
+            "songName": "Amethyst Aurora",
+            "difficultyName": "ajmosca's Expert",
+            "mapper": "fanzhen0019",
+            "modId": "13NM"
         },
         {
-            "songName": "Sempronius",
-            "difficultyName": "COHORTES::#I[PRAETORIAE]",
-            "mapper": "Stick2Glue",
-            "modId": "DT3"
+            "songName": "Remember Me",
+            "difficultyName": "Kin's Entwinement of Darkness",
+            "mapper": "Bara-",
+            "modId": "14DT"
+        },
+        {
+            "songName": "Beyond the Eternity",
+            "difficultyName": "Despair",
+            "mapper": "Hishiro Chizuru",
+            "modId": "15NM"
         }
     ]
 }

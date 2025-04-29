@@ -35,7 +35,7 @@ const beatmapMetadataSectionEl = document.getElementById("beatmap-metadata-secti
 const songTitleEl = document.getElementById("song-title")
 const songDifficultyEl = document.getElementById("song-difficulty")
 const songMapperEl = document.getElementById("song-mapper")
-let mapId, updateStats = false
+let mapId
 
 // Map slot information
 let currentMapSlot = 0
@@ -71,6 +71,7 @@ const lengthnumberEl = document.getElementById("length-number")
 
 socket.onmessage = async event => {
     const data = JSON.parse(event.data)
+    console.log(data)
 
     // Replayer name
     if (replayerName !== data.resultsScreen.playerName && data.resultsScreen.playerName !== "") {
@@ -95,7 +96,7 @@ socket.onmessage = async event => {
 
         // Update "toMapSlot"
         previousToMapSlot = toMapSlot
-        toMapSlot = allBeatmaps.findIndex(beatmap => beatmap.songName === data.beatmap.title && beatmap.difficultyName === data.beatmap.version)
+        toMapSlot = allBeatmaps.findIndex(beatmap => beatmap.songName.toLowerCase() === data.beatmap.title.toLowerCase() && beatmap.difficultyName.toLowerCase() === data.beatmap.version.toLowerCase())
         if (toMapSlot === -1) toMapSlot = previousToMapSlot
 
         // Calculate difference between number of slots
@@ -143,31 +144,28 @@ socket.onmessage = async event => {
             }
         }
 
-        await delay(250)
-        updateStats = true
     }
 
-    if (updateStats) {
-        updateStats = false
-        starRatingNumberEl.innerText = data.beatmap.stats.stars.total.toFixed(2)
-        circleSizeNumberEl.innerText = data.beatmap.stats.cs.converted.toFixed(1)
-        approachRateNumberEl.innerText = data.beatmap.stats.ar.converted.toFixed(1)
-        overallDifficultyNumberEl.innerText = data.beatmap.stats.od.converted.toFixed(1)
-        bpmNumberEl.innerText = data.beatmap.stats.bpm.common
+    // Continually update stats
+    starRatingNumberEl.innerText = data.beatmap.stats.stars.total.toFixed(2)
+    circleSizeNumberEl.innerText = data.beatmap.stats.cs.converted.toFixed(1)
+    approachRateNumberEl.innerText = data.beatmap.stats.ar.converted.toFixed(1)
+    overallDifficultyNumberEl.innerText = data.beatmap.stats.od.converted.toFixed(1)
+    bpmNumberEl.innerText = data.beatmap.stats.bpm.common
 
-        let currentLen = Math.round((data.beatmap.time.lastObject - data.beatmap.time.firstObject) / 1000)
+    let currentLen = Math.round((data.beatmap.time.lastObject - data.beatmap.time.firstObject) / 1000)
 
-        // Find map
-        const findMap = allBeatmaps.find(beatmap => beatmap.songName === data.beatmap.title && beatmap.difficultyName === data.beatmap.version)
-        if (findMap && findMap.modId.includes("DT")) {
-            currentLen = Math.round(currentLen / 3 * 2)
-        }
-
-        const secondsCounter = currentLen % 60
-        lengthnumberEl.innerText = `${Math.floor(currentLen / 60)}:${(secondsCounter < 10) ? '0': ''}${secondsCounter}`
+    // Find map
+    const findMap = allBeatmaps.find(beatmap => beatmap.songName === data.beatmap.title && beatmap.difficultyName === data.beatmap.version)
+    if (findMap && findMap.modId.includes("DT")) {
+        currentLen = Math.round(currentLen / 3 * 2)
     }
 
+    const secondsCounter = currentLen % 60
+    lengthnumberEl.innerText = `${Math.floor(currentLen / 60)}:${(secondsCounter < 10) ? '0': ''}${secondsCounter}`
     const fullStrains = data.performance.graph.series[0].data.map((num, index) => num + data.performance.graph.series[1].data[index] + data.performance.graph.series[2].data[index] + data.performance.graph.series[3].data[index]);
+    
+    // Strain graph
     if (tempStrains != JSON.stringify(fullStrains) && window.strainGraph) {
         tempStrains = JSON.stringify(fullStrains)
         if (fullStrains) {
