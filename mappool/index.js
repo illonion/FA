@@ -304,9 +304,9 @@ socket.onmessage = event => {
             // Check for EZ, FL, and EZFL Multi
             if (mappoolMap && (mappoolMap.mod.includes("FM") || mappoolMap.mod.includes("FCM"))) {
                 const mods = getMods(currentPlayer.play.mods.number)
-                if (mods.includes("EZ") && mods.includes("FL")) currentScore *= 2.5
-                else if (mods.includes("EZ")) currentScore *= mappoolMap.EZMulti
-                else if (mods.includes("FL")) currentScore *= 1.4
+                if (mods.contains("EZ") && mods.contains("FL")) currentScore *= 2.5
+                else if (mods.contains("EZ")) currentScore *= currentMappoolBeatmap.EZMulti
+                else if (mods.contains("FL")) currentScore *= 1.4
             }
 
             // Add score to correct team

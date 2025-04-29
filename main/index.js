@@ -106,7 +106,6 @@ const nowPlayingStatsBpmEl = document.getElementById("now-playing-stats-bpm")
 // Socket message
 socket.onmessage = event => {
     const data = JSON.parse(event.data)
-    console.log(data)
 
     // Team Names
     if (currentLeftTeamName != data.tourney.team.left && allTeams) {
@@ -224,10 +223,10 @@ socket.onmessage = event => {
             let currentScore = currentPlayer.play.score            
             // Check for EZ, FL, and EZFL Multi
             if (currentMappoolBeatmap && (currentMappoolBeatmap.mod.includes("FM") || currentMappoolBeatmap.mod.includes("FCM"))) {
-                const mods = currentPlayer.play.mods.name
-                if (mods.includes("EZ") && mods.includes("FL")) currentScore *= 2.5
-                else if (mods.includes("EZ")) currentScore *= currentMappoolBeatmap.EZMulti
-                else if (mods.includes("FL")) currentScore *= 1.4
+                const mods = getMods(currentPlayer.play.mods.number)
+                if (mods.contains("EZ") && mods.contains("FL")) currentScore *= 2.5
+                else if (mods.contains("EZ")) currentScore *= currentMappoolBeatmap.EZMulti
+                else if (mods.contains("FL")) currentScore *= 1.4
             }
 
             // Add score to correct team
