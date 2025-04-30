@@ -26,6 +26,7 @@ async function getBeatmaps() {
         await delay(1000)
         let responseJson = await response.json()
         responseJson[0].mod = allBeatmaps[i].mod
+        responseJson[0].EZMulti = allBeatmaps[i].EZMulti
         
         allBeatmapsJson.push(responseJson[0])
 

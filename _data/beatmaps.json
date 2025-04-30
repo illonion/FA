@@ -32,8 +32,8 @@
             "max_combo": "712",
             "mode": "0",
             "packs": "S1207",
-            "passcount": "9146",
-            "playcount": "54334",
+            "passcount": "9182",
+            "playcount": "54469",
             "rating": "9.32121",
             "source": "",
             "storyboard": "1",
@@ -44,7 +44,8 @@
             "total_length": "197",
             "version": "Fly! '11",
             "video": "0",
-            "mod": "EZDT"
+            "mod": "EZDT",
+            "EZMulti": 1
         },
         {
             "approved": "0",
@@ -66,19 +67,19 @@
             "diff_overall": "9.1",
             "diff_size": "3.3",
             "diff_speed": null,
-            "difficultyrating": "5.76959",
+            "difficultyrating": "5.76945",
             "download_unavailable": "0",
-            "favourite_count": "75",
-            "file_md5": "ca71be30e390007cb5251a118ec321ad",
+            "favourite_count": "76",
+            "file_md5": "6853b19b6e1970a8a1eada17e66bca5a",
             "genre_id": "4",
             "hit_length": "226",
             "language_id": "3",
-            "last_update": "2025-04-15 14:51:40",
+            "last_update": "2025-04-29 13:46:12",
             "max_combo": "1354",
             "mode": "0",
             "packs": null,
-            "passcount": "35",
-            "playcount": "80",
+            "passcount": "7",
+            "playcount": "13",
             "rating": "0",
             "source": "",
             "storyboard": "0",
@@ -89,7 +90,8 @@
             "total_length": "227",
             "version": "Surgis & Hamano's Wet Dreams",
             "video": "0",
-            "mod": "NM"
+            "mod": "NM",
+            "EZMulti": 2.4
         },
         {
             "approved": "-2",
@@ -122,8 +124,8 @@
             "max_combo": "1164",
             "mode": "0",
             "packs": null,
-            "passcount": "2662",
-            "playcount": "8182",
+            "passcount": "2671",
+            "playcount": "8218",
             "rating": "0",
             "source": "",
             "storyboard": "0",
@@ -134,7 +136,8 @@
             "total_length": "118",
             "version": "Extra",
             "video": "0",
-            "mod": "NM"
+            "mod": "NM",
+            "EZMulti": 1.6
         },
         {
             "approved": "1",
@@ -168,7 +171,7 @@
             "mode": "0",
             "packs": "S1365",
             "passcount": "878",
-            "playcount": "4096",
+            "playcount": "4114",
             "rating": "9.04",
             "source": "",
             "storyboard": "0",
@@ -179,7 +182,8 @@
             "total_length": "249",
             "version": "Insane",
             "video": "1",
-            "mod": "DT"
+            "mod": "DT",
+            "EZMulti": 1
         },
         {
             "approved": "1",
@@ -212,8 +216,8 @@
             "max_combo": "1146",
             "mode": "0",
             "packs": "P10,S411,TC21",
-            "passcount": "88457",
-            "playcount": "790335",
+            "passcount": "88466",
+            "playcount": "790497",
             "rating": "9.54042",
             "source": "",
             "storyboard": "0",
@@ -224,7 +228,8 @@
             "total_length": "172",
             "version": "Zapy's Extra",
             "video": "0",
-            "mod": "HD"
+            "mod": "HD",
+            "EZMulti": 1
         },
         {
             "approved": "1",
@@ -257,9 +262,9 @@
             "max_combo": "1659",
             "mode": "0",
             "packs": "S1023",
-            "passcount": "11038",
-            "playcount": "82531",
-            "rating": "9.20783",
+            "passcount": "11047",
+            "playcount": "82549",
+            "rating": "9.21021",
             "source": "",
             "storyboard": "0",
             "submit_date": "2021-04-24 06:03:09",
@@ -269,7 +274,8 @@
             "total_length": "230",
             "version": "Rebirth",
             "video": "0",
-            "mod": "HR"
+            "mod": "HR",
+            "EZMulti": 1
         },
         {
             "approved": "1",
@@ -293,7 +299,7 @@
             "diff_speed": "2.67018",
             "difficultyrating": "6.10203",
             "download_unavailable": "0",
-            "favourite_count": "48",
+            "favourite_count": "49",
             "file_md5": "cca7967bf9f720ad15a0cd051fca1e0d",
             "genre_id": "10",
             "hit_length": "117",
@@ -302,8 +308,8 @@
             "max_combo": "1050",
             "mode": "0",
             "packs": "S1607",
-            "passcount": "603",
-            "playcount": "3628",
+            "passcount": "657",
+            "playcount": "3718",
             "rating": "8.17073",
             "source": "BOFU2017 - LEGENDA EST A MYTH -",
             "storyboard": "0",
@@ -314,7 +320,8 @@
             "total_length": "119",
             "version": "WERF'S EXTRA",
             "video": "0",
-            "mod": "FM"
+            "mod": "FM",
+            "EZMulti": 2.5
         },
         {
             "approved": "-2",
@@ -347,8 +354,8 @@
             "max_combo": "818",
             "mode": "0",
             "packs": null,
-            "passcount": "945",
-            "playcount": "3160",
+            "passcount": "963",
+            "playcount": "3178",
             "rating": "0",
             "source": "",
             "storyboard": "0",
@@ -359,7 +366,8 @@
             "total_length": "132",
             "version": "GODLIKE",
             "video": "0",
-            "mod": "NM"
+            "mod": "NM",
+            "EZMulti": 1
         },
         {
             "approved": "-2",
@@ -404,7 +412,8 @@
             "total_length": "120",
             "version": "Extra",
             "video": "0",
-            "mod": "HD"
+            "mod": "HD",
+            "EZMulti": 1
         },
         {
             "approved": "1",
@@ -437,8 +446,8 @@
             "max_combo": "1495",
             "mode": "0",
             "packs": "S1592",
-            "passcount": "1245",
-            "playcount": "5788",
+            "passcount": "1254",
+            "playcount": "5824",
             "rating": "9.6",
             "source": "東方文花帖　～ Shoot the Bullet.",
             "storyboard": "0",
@@ -449,7 +458,8 @@
             "total_length": "228",
             "version": "HyperPigeon's Insane",
             "video": "0",
-            "mod": "DT"
+            "mod": "DT",
+            "EZMulti": 1
         },
         {
             "approved": "-2",
@@ -482,8 +492,8 @@
             "max_combo": "1335",
             "mode": "0",
             "packs": "P265",
-            "passcount": "783",
-            "playcount": "1972",
+            "passcount": "792",
+            "playcount": "1981",
             "rating": "0",
             "source": "osu! World Cup 2024",
             "storyboard": "0",
@@ -494,7 +504,8 @@
             "total_length": "175",
             "version": "Vacuum",
             "video": "0",
-            "mod": "NM"
+            "mod": "NM",
+            "EZMulti": 1
         },
         {
             "approved": "-2",
@@ -527,8 +538,8 @@
             "max_combo": "1127",
             "mode": "0",
             "packs": null,
-            "passcount": "872",
-            "playcount": "3403",
+            "passcount": "890",
+            "playcount": "3421",
             "rating": "0",
             "source": "",
             "storyboard": "0",
@@ -539,7 +550,8 @@
             "total_length": "210",
             "version": "Blinding Light",
             "video": "0",
-            "mod": "HR"
+            "mod": "HR",
+            "EZMulti": 1
         },
         {
             "approved": "1",
@@ -572,9 +584,9 @@
             "max_combo": "1182",
             "mode": "0",
             "packs": "P231,S1498",
-            "passcount": "2322",
-            "playcount": "12142",
-            "rating": "8.92857",
+            "passcount": "2340",
+            "playcount": "12214",
+            "rating": "8.93617",
             "source": "osu! World Cup 2023",
             "storyboard": "0",
             "submit_date": "2023-11-26 20:03:55",
@@ -584,7 +596,8 @@
             "total_length": "175",
             "version": "ajmosca's Expert",
             "video": "0",
-            "mod": "NM"
+            "mod": "NM",
+            "EZMulti": 1
         },
         {
             "approved": "4",
@@ -608,7 +621,7 @@
             "diff_speed": "3.0132",
             "difficultyrating": "6.4914",
             "download_unavailable": "0",
-            "favourite_count": "823",
+            "favourite_count": "824",
             "file_md5": "e3c2457f45ecc5879096ec9707322a58",
             "genre_id": "10",
             "hit_length": "172",
@@ -617,8 +630,8 @@
             "max_combo": "1166",
             "mode": "0",
             "packs": "SL10,SL7,SL8",
-            "passcount": "3455",
-            "playcount": "30507",
+            "passcount": "3473",
+            "playcount": "30534",
             "rating": "9.36178",
             "source": "",
             "storyboard": "0",
@@ -629,7 +642,8 @@
             "total_length": "199",
             "version": "Kin's Entwinement of Darkness",
             "video": "0",
-            "mod": "DT"
+            "mod": "DT",
+            "EZMulti": 1
         },
         {
             "approved": "1",
@@ -663,7 +677,7 @@
             "mode": "0",
             "packs": "S924",
             "passcount": "5067",
-            "playcount": "58663",
+            "playcount": "58672",
             "rating": "9.4382",
             "source": "",
             "storyboard": "0",
@@ -674,7 +688,8 @@
             "total_length": "305",
             "version": "Despair",
             "video": "0",
-            "mod": "FM"
+            "mod": "FM",
+            "EZMulti": 2
         }
     ]
 }
