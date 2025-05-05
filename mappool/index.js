@@ -232,7 +232,7 @@ socket.onmessage = event => {
         leftTeamNameEl.innerText = currentLeftTeamName.toUpperCase()
 
         const team = findTeam(currentLeftTeamName)
-        if (team && team.imageUrl !== "https://i.imgur.com/NSCK2vS.jpeg") leftFlagEl.style.backgroundImage = `url("https://api.codetabs.com/v1/proxy?quest=${team.imageUrl}")`
+        if (team && team.imageUrl !== "https://i.imgur.com/NSCK2vS.jpeg") leftFlagEl.style.backgroundImage = `url("https://api.cors.lol/?url=${team.imageUrl}")`
         else if (team) leftFlagEl.style.backgroundImage = `url("../_shared/assets/team-banner/imgur-team-banner.jpeg`
         else leftFlagEl.style.backgroundImage = `url()`
     }
@@ -241,7 +241,7 @@ socket.onmessage = event => {
         rightTeamNameEl.innerText = currentRightTeamName.toUpperCase()
 
         const team = findTeam(currentRightTeamName)
-        if (team && team.imageUrl !== "https://i.imgur.com/NSCK2vS.jpeg") rightFlagEl.style.backgroundImage = `url("https://api.codetabs.com/v1/proxy?quest=${team.imageUrl}")`
+        if (team && team.imageUrl !== "https://i.imgur.com/NSCK2vS.jpeg") rightFlagEl.style.backgroundImage = `url("https://api.cors.lol/?url=${team.imageUrl}")`
         else if (team) rightFlagEl.style.backgroundImage = `url("../_shared/assets/team-banner/imgur-team-banner.jpeg`
         else rightFlagEl.style.backgroundImage = `url()`
     }
@@ -304,9 +304,9 @@ socket.onmessage = event => {
             // Check for EZ, FL, and EZFL Multi
             if (mappoolMap && (mappoolMap.mod.includes("FM") || mappoolMap.mod.includes("FCM"))) {
                 const mods = getMods(currentPlayer.play.mods.number)
-                if (mods.contains("EZ") && mods.contains("FL")) currentScore *= 2.5
-                else if (mods.contains("EZ")) currentScore *= currentMappoolBeatmap.EZMulti
-                else if (mods.contains("FL")) currentScore *= 1.4
+                if (mods.includes("EZ") && mods.includes("FL")) currentScore *= 2.5
+                else if (mods.includes("EZ")) currentScore *= mappoolMap.EZMulti
+                else if (mods.includes("FL")) currentScore *= 1.4
             }
 
             // Add score to correct team
@@ -328,7 +328,7 @@ socket.onmessage = event => {
         }
     }
 
-    if (mapId !== data.beatmap.id || mapChecksum !== data.beatmap.checksum) {
+    if (mapId !== data.beatmap.id || mapChecksum !== data.beatmap.checksum && allBeatmaps.length !== 0) {
         mapId = data.beatmap.id
         mapChecksum = data.beatmap.checksum
 
