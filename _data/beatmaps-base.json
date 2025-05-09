@@ -1,20 +1,22 @@
 {
-    "roundName": "QUARTERFINALS",
+    "roundName": "SEMIFINALS",
     "beatmaps": [
-        {"beatmap_id": 3606082, "mod": "EZDT", "EZMulti": 1},
-        {"beatmap_id": 4545983, "mod": "NM", "EZMulti": 2.4},
-        {"beatmap_id": 3817199, "mod": "NM", "EZMulti": 1.6},
-        {"beatmap_id": 3346091, "mod": "DT", "EZMulti": 1},
-        {"beatmap_id": 611753, "mod": "HD", "EZMulti": 1},
-        {"beatmap_id": 2965623, "mod": "HR", "EZMulti": 1},
-        {"beatmap_id": 5045936, "mod": "FM", "EZMulti": 2.5},
-        {"beatmap_id": 3426456, "mod": "NM", "EZMulti": 1},
-        {"beatmap_id": 1519543, "mod": "HD", "EZMulti": 1},
-        {"beatmap_id": 4793444, "mod": "DT", "EZMulti": 1},
-        {"beatmap_id": 4847498, "mod": "NM", "EZMulti": 1},
-        {"beatmap_id": 3155970, "mod": "HR", "EZMulti": 1},
-        {"beatmap_id": 4500092, "mod": "NM", "EZMulti": 1},
-        {"beatmap_id": 1191979, "mod": "DT", "EZMulti": 1},
-        {"beatmap_id": 2522651, "mod": "FM", "EZMulti": 2}
+        {"beatmap_id": 4560092, "mod": "DTFM", "EZMulti": 1.8},
+        {"beatmap_id": 3120569, "mod": "HD", "EZMulti": 1},
+        {"beatmap_id": 19467, "mod": "FL", "EZMulti": 1},
+        {"beatmap_id": 4840080, "mod": "HD", "EZMulti": 1},
+        {"beatmap_id": 1269564, "mod": "HR", "EZMulti": 1},
+        {"beatmap_id": 124993, "mod": "EZ", "EZMulti": 1},
+        {"beatmap_id": 4913601, "mod": "NM", "EZMulti": 1},
+        {"beatmap_id": 4989242, "mod": "DT", "EZMulti": 1},
+        {"beatmap_id": 4179977, "mod": "DT", "EZMulti": 1},
+        {"beatmap_id": 1910547, "mod": "NM", "EZMulti": 1},
+        {"beatmap_id": 1306399, "mod": "FM", "EZMulti": 2.4},
+        {"beatmap_id": 4812697, "mod": "HD", "EZMulti": 1},
+        {"beatmap_id": 4329092, "mod": "FCM", "EZMulti": 1.5},
+        {"beatmap_id": 2207682, "mod": "HR", "EZMulti": 1},
+        {"beatmap_id": 2511210, "mod": "NM", "EZMulti": 2},
+        {"beatmap_id": 2753035, "mod": "DT", "EZMulti": 1},
+        {"beatmap_id": 3215636, "mod": "NM", "EZMulti": 2}
     ]
 }
